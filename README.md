@@ -1,1 +1,1 @@
-# Home work labs for OTUS RDBMS
+# Home works for course OTUS RDBMS
