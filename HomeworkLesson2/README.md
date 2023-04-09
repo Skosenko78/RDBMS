@@ -201,7 +201,7 @@ CREATE TABLE public.order
  id          serial NOT NULL PRIMARY KEY,
  fk_status   serial NOT NULL,
  fk_customer serial NOT NULL,
- datestamp   date NOT NULL CHECK ( datestamp >= current_date ),
+ datestamp   date NOT NULL, // проверка datestamp >= current_date на бекенде
  FOREIGN KEY ( fk_customer ) REFERENCES public.customer ( id ),
  FOREIGN KEY ( fk_status ) REFERENCES public.status ( id )
 );
