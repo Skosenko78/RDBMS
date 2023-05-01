@@ -2,7 +2,6 @@ version: '3.1'
 
 volumes:
    db-data: {}
- #  db-fastdisk:
 
 networks:
   pdb:
@@ -16,12 +15,11 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=passdb
-    #  - POSTGRES_DB=user_db
+      - POSTGRES_DB=db_otus
     ports:
       - "5432:5432"
     restart: always
     volumes:
       - db-data:/var/lib/postgresql/data/
-      - db-fastdisk:/var/lib/postgresql/data/fastbase/
     networks:
       - pdb
